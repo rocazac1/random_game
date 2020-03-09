@@ -5,10 +5,10 @@ guessed = False                # Set the guessed to false
 number = randint(0, 100)       # Pick random number between 0 - 100
 guesses = 0                    # Set guess counter to 0
 
-
 # while loop which loops betwen the lines until the number is guessed
 #print(number)
-while not guessed:
+
+while not guessed and guesses < 4: 
     ans = input("What number am I thinking of between 0 - 100? ")       # Ask for user input
     guesses += 1                                                       # Add +1 to  guess when loop runs
     clear_output()
@@ -29,3 +29,5 @@ while not guessed:
     
     except ValueError:                                                           # Catches the wrong type of data 
         print("{} is not a number. Please insert a number" .format(ans))
+
+
